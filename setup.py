@@ -3,7 +3,7 @@ from os import path
 from setuptools import setup, find_packages
 
 try:
-    pkg_name = 'elasticflow'
+    pkg_name = 'efficient_tf'
     libinfo_py = path.join(pkg_name, '__init__.py')
     libinfo_content = open(libinfo_py, 'r', encoding='utf8').readlines()
     version_line = [l.strip() for l in libinfo_content if l.startswith('__version__')][0]
@@ -13,10 +13,8 @@ except FileNotFoundError:
 
 base_dep = [
     'numpy',
-    'termcolor',
-    'protobuf',
-    'python-rocksdb',
-    'rq']
+    'termcolor'
+]
 
 
 setup(
